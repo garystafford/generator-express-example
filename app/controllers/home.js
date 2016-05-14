@@ -3,6 +3,9 @@ var express = require('express'),
   mongoose = require('mongoose'),
   Article = mongoose.model('Article');
 
+var TestData = require('../../testData');
+TestData.addTestData();
+
 module.exports = function (app) {
   app.use('/', router);
 };

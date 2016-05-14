@@ -1,0 +1,23 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+a {
+  color: #00B7FF; }
+
+table {
+  margin: 10px; }
+
+th, td {
+  padding: 5px;
+  border: 2px solid #999; }
+
+th {
+  background: #ccc; }
+
+tr:nth-child(odd) {
+  background: #eee; }
+
+td a {
+  color: #000;
+  text-decoration: underline; }

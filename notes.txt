@@ -1,0 +1,24 @@
+gstafford@nagstaffo:mean-message-example$ yo
+? 'Allo Gary! What would you like to do? Express
+
+Make sure you are in the directory you want to scaffold into.
+This generator can also be run with: yo express
+
+? Would you like to create a new directory for your project? No
+? Select a version to install: MVC
+? Select a view engine to use: Handlebars
+? Select a css preprocessor to use (Sass Requires Ruby): Node-Sass
+? Select a database to use: MongoDB
+? Select a build tool to use: Grunt
+
+I'm all done. Running npm install & bower install for you to install the required dependencies. If this fails, try running the command yourself.
+
+
+show dbs
+use mean-message-example-development
+show tables
+db.articles.find()
+
+> db.articles.find()
+{ "_id" : ObjectId("5733fd52066394994da5f836"), "title" : "foo", "url" : "http://www.google.com", "text" : "test text", "__v" : 0 }
+{ "_id" : ObjectId("5733fe27848a3c6f508ad9cf"), "title" : "foo", "url" : "http://www.google.com", "text" : "test text", "__v" : 0 }

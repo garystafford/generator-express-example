@@ -1,0 +1,26 @@
+<div class="alert alert-info">This page displayed the users coming from the MongoDB instance.</div>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Title</th>
+        <th>URL</th>
+        <th>Text</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#if articles}}
+      {{#each articles}}
+          <tr>
+              <td>{{title}}</td>
+              <td>{{url}}</td>
+              <td>{{text}}</td>
+          </tr>
+      {{/each}}
+    {{else}}
+        <tr>
+            <td colspan="4" class="text-center">No data to display.</td>
+        </tr>
+    {{/if}}
+    </tbody>
+</table>
