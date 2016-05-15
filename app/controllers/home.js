@@ -6,20 +6,34 @@ var express = require('express'),
 
 module.exports = function (app) {
   app.use('/', router);
+
+  if (app.get('env') === 'development') {
+    app.use(function (err, req, res, next) {
+      res.status(err.status || 500);
+      res.render('error', {
+        message: err.message,
+        error: err
+      });
+    });
+  } else {
+    app.use(function (err, req, res, next) {
+      // Do logging and user-friendly error message display
+      console.error(err);
+      res.status(500).send({status: 500, message: 'internal error', type: 'internal'});
+    })
+  }
 };
 
 var articleCount = 0;
 
 router.get('/', function (req, res, next) {
-  Data.createTestData(true);
-  Article.count(null, function (err, count) {
-    if (err) return next(err);
+  Data.refreshData(true);
+  Article.count(function (err, count) {
     articleCount = count;
   });
   next();
-}, function (req, res, next) {
+}, function (req, res) {
   Article.find(function (err, articles) {
-    if (err) return next(err);
     res.render('index', {
       title: 'Generator-Express MVC',
       articles: articles,
@@ -27,12 +41,3 @@ router.get('/', function (req, res, next) {
     });
   });
 });
-
-// router.get('/count', function (req, res, next) {
-//   Article.count(null, function (err, count) {
-//     if (err) return next(err);
-//     res.render('count', {
-//       count: count.toString()
-//     });
-//   });
-// });

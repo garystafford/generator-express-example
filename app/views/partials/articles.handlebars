@@ -1,11 +1,10 @@
-<div class="alert alert-info">This page displayed the users coming from the MongoDB instance.</div>
-
 <table class="table table-striped">
     <thead>
     <tr>
         <th>Title</th>
         <th>URL</th>
-        <th>Text</th>
+        <th>Description</th>
+        <th>Timestamp</th>
     </tr>
     </thead>
     <tbody>
@@ -15,6 +14,7 @@
               <td>{{title}}</td>
               <td><a href="{{url}}">{{url}}</a></td>
               <td>{{text}}</td>
+              <td>{{timestamp}}</td>
           </tr>
       {{/each}}
     {{else}}
