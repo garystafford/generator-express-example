@@ -1,6 +1,6 @@
-var express = require('express'),
-  mongoose = require('mongoose'),
-  Article = mongoose.model('Article');
+var express = require('express');
+var mongoose = require('mongoose');
+var Article = mongoose.model('Article');
 
 var Data = (function () {
   var date = new Date().getTime();
@@ -46,7 +46,7 @@ var Data = (function () {
       if (err) {
         if (err) return next(err);
       } else {
-        return console.log(docs);
+        console.log(docs);
       }
     });
   };
