@@ -7,6 +7,7 @@ var express = require('express'),
 module.exports = function (app) {
   app.use('/', router);
 
+  //http://webapplog.com/error-handling-and-running-an-express-js-app/
   if (app.get('env') === 'development') {
     app.use(function (err, req, res, next) {
       res.status(err.status || 500);
