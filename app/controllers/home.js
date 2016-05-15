@@ -8,13 +8,22 @@ module.exports = function (app) {
   app.use('/', router);
 };
 
+var articleCount = 0;
+
 router.get('/', function (req, res, next) {
-  Data.createTestData(false);
+  Data.createTestData(true);
+  Article.count(null, function (err, count) {
+    if (err) return next(err);
+    articleCount = count;
+  });
+  next();
+}, function (req, res, next) {
   Article.find(function (err, articles) {
     if (err) return next(err);
     res.render('index', {
       title: 'Generator-Express MVC',
-      articles: articles
+      articles: articles,
+      count: articleCount
     });
   });
 });
