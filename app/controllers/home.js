@@ -9,7 +9,7 @@ module.exports = function (app) {
 };
 
 router.get('/', function (req, res, next) {
-  Data.removeData({}, Data.addTestData());
+  Data.createTestData(false);
   Article.find(function (err, articles) {
     if (err) return next(err);
     res.render('index', {
@@ -19,11 +19,11 @@ router.get('/', function (req, res, next) {
   });
 });
 
-router.get('/count', function (req, res, next) {
-  Article.count(null, function (err, count) {
-    if (err) return next(err);
-    res.render('count', {
-      count: count.toString()
-    });
-  });
-});
+// router.get('/count', function (req, res, next) {
+//   Article.count(null, function (err, count) {
+//     if (err) return next(err);
+//     res.render('count', {
+//       count: count.toString()
+//     });
+//   });
+// });
