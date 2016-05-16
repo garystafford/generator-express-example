@@ -30,6 +30,31 @@ var Data = (function () {
     url: 'http://www.article.com/5',
     text: 'An article about the number five',
     timestamp: date
+  }, {
+    title: 'Article Six',
+    url: 'http://www.article.com/6',
+    text: 'An article about the number six',
+    timestamp: date
+  }, {
+    title: 'Article Seven',
+    url: 'http://www.article.com/7',
+    text: 'An article about the number seven',
+    timestamp: date
+  }, {
+    title: 'Article Eight',
+    url: 'http://www.article.com/8',
+    text: 'An article about the number eight',
+    timestamp: date
+  }, {
+    title: 'Article Nine',
+    url: 'http://www.article.com/9',
+    text: 'An article about the number nine',
+    timestamp: date
+  }, {
+    title: 'Article Ten',
+    url: 'http://www.article.com/10',
+    text: 'An article about the number ten',
+    timestamp: date
   }];
 
   var removeData = function (callback) {
