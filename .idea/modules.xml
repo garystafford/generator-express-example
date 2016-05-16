@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../generator-express-example/.idea/mean-message-example.iml" filepath="$PROJECT_DIR$/../generator-express-example/.idea/mean-message-example.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/generator-express-example.iml" filepath="$PROJECT_DIR$/.idea/generator-express-example.iml" />
     </modules>
   </component>
 </project>
