@@ -1,15 +1,12 @@
 ## Yeoman Express Generator Example
 
 Built with [generator-express](https://github.com/petecoop/generator-express)
+
 Options: MVC, Handlebars, Node-Sass, MongoDB, Grunt
 
 ```
 # Scaffolding Commands
-yo
-? 'Allo Gary! What would you like to do? Express
-
-Make sure you are in the directory you want to scaffold into.
-This generator can also be run with: yo express
+yo express
 
 ? Would you like to create a new directory for your project? No
 ? Select a version to install: MVC
